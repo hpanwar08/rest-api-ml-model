@@ -13,4 +13,4 @@ A microservice built in Flask to deploy ML models as api.
 * To access swagger api, open http://localhost:5000/api/v1/
 
 
-### Work in progress
+### Work in progress...
