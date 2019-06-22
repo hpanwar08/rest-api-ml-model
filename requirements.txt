@@ -1,0 +1,8 @@
+werkzeug==0.14.1
+Flask==1.0.2
+Flask-Testing==0.7.1
+flask-restplus
+Flask-RESTful==0.3.7
+coverage==4.5.3
+flake8
+python-dotenv
