@@ -11,6 +11,8 @@ A microservice built in Flask to deploy ML models as api.
 * To start the microservice  
   `python manage.py run`  
 * To access swagger api, open http://localhost:5000/api/v1/
+* To run tests  
+  `python manage.py test`
 
 
 ### Work in progress... 
