@@ -2,6 +2,7 @@ import sys
 import unittest
 from flask.cli import FlaskGroup
 import coverage
+from gevent import wsgi
 from project import create_app
 
 COV = coverage.coverage(
@@ -17,7 +18,20 @@ cli = FlaskGroup(app)
 
 
 @cli.command()
+def start():
+    """cli function to start server in gevent
+    """
+    try:
+        http_server = wsgi.WSGIServer(('0.0.0.0', 5000), app)
+        http_server.serve_forever()
+    except KeyboardInterrupt:
+        http_server.stop()
+
+
+@cli.command()
 def test():
+    """Run the tests
+    """
     tests = unittest.TestLoader().discover("project/tests", pattern="test*.py")
     result = unittest.TextTestRunner(verbosity=2).run(tests)
     if result.wasSuccessful():

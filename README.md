@@ -1,6 +1,6 @@
 # Rest API for deploying ML models
 
-A microservice built in Flask to deploy ML models as api.
+A microservice built on Flask to deploy ML models as api.
 
 ## Steps to run
 * Create virtual or conda environment and activate it  
