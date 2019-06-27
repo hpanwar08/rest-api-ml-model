@@ -2,7 +2,7 @@ import sys
 import unittest
 from flask.cli import FlaskGroup
 import coverage
-from gevent import wsgi
+from gevent import pywsgi
 from project import create_app
 
 COV = coverage.coverage(
@@ -22,7 +22,7 @@ def start():
     """cli function to start server in gevent
     """
     try:
-        http_server = wsgi.WSGIServer(('0.0.0.0', 5000), app)
+        http_server = pywsgi.WSGIServer(('0.0.0.0', 5000), app)
         http_server.serve_forever()
     except KeyboardInterrupt:
         http_server.stop()
