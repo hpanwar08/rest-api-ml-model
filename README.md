@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/hpanwar08/rest-api-ml-model
+.svg?branch=master)](https://travis-ci.org/hpanwar08/rest-api-ml-model
+)
+
 # Rest API for deploying ML models
 
 A microservice built on Flask to deploy ML models as api.
@@ -13,6 +17,8 @@ A microservice built on Flask to deploy ML models as api.
 * To access swagger api, open http://localhost:5000/api/v1/
 * To run tests  
   `python manage.py test`
+
+  `python -m spacy download en_core_web_sm`
 
 
 ### Work in progress... 
