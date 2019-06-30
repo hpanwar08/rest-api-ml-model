@@ -31,4 +31,9 @@ A microservice built on Flask to deploy ML models as rest api.
 
 
 
-### Work in progress... 
+## Work in progress... 
+### TODO
+- [ ] add sentiment analysis model
+- [ ] update api
+- [ ] add tests
+- [ ] add load testing
