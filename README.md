@@ -14,7 +14,7 @@ A microservice built on Flask to deploy ML models as rest api.
   `python3 -m venv restenv`  
   `source restenv/bin/activate`
 * Install dependencies  
-  Edit line 15-17 in requirements.txt according to your OS
+  Edit line 15-17 in requirements.txt according to your OS  
   `pip install -r requirements.txt`  
 * Install spacy model  
   `python -m spacy download en_core_web_sm`
