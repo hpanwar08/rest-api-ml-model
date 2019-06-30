@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/hpanwar08/rest-api-ml-model
-.svg?branch=master)](https://travis-ci.org/hpanwar08/rest-api-ml-model
+[![Build Status](https://travis-ci.org/hpanwar08/rest-api-ml-model.svg?branch=master)](https://travis-ci.org/hpanwar08/rest-api-ml-model
 )
 
 # Rest API for deploying ML models
