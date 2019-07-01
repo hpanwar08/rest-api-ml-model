@@ -109,7 +109,7 @@ class ConcatPoolingGRUAdaptive(nn.Module):
         model.load_state_dict(
             torch.load(
                 'project/sentiment/ml_models/'
-                'text_gru_concat_sentiment_10.pth'))
+                'text_gru_concat_sentiment_10.pth', map_location='cpu'))
         model.eval()
         return model
 
