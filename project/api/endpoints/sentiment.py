@@ -29,7 +29,6 @@ class Sentiment(Resource):
             return response_body, 400
 
         result, probs = model.predict(post_data['text'])
-        print(result, probs)
         if probs:
             response_body['status'] = 'success'
             message = {}
