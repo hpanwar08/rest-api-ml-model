@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/hpanwar08/rest-api-ml-model.svg?branch=master)](https://travis-ci.org/hpanwar08/rest-api-ml-model
 )
 
-# Rest API for deploying ML models
+# Rest API for deploying ML models :zap:
 
 A microservice built on Flask to deploy ML models as rest api.
 
@@ -37,3 +37,4 @@ A microservice built on Flask to deploy ML models as rest api.
 - [ ] update api
 - [ ] add tests
 - [ ] add load testing
+- [ ] add authentication
