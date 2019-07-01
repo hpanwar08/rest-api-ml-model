@@ -1,6 +1,7 @@
 import sys
 import unittest
 from flask.cli import FlaskGroup
+import click
 import coverage
 from gevent.pywsgi import WSGIServer
 from gevent import monkey
@@ -26,8 +27,10 @@ def start():
     """
     try:
         http_server = WSGIServer(('', 5000), app)
+        click.echo('Starting web server...')
         http_server.serve_forever()
     except KeyboardInterrupt:
+        click.echo('Stopping web server...')
         http_server.stop()
 
 
