@@ -40,5 +40,5 @@ class Sentiment(Resource):
             response_body['message'] = message
             return response_body, 200
 
-        response_body['message': 'model error']
+        response_body['message'] = 'model error'
         return response_body, 400
