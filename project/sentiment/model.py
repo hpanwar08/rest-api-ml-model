@@ -40,14 +40,14 @@ class ConcatPoolingGRUAdaptive(nn.Module):
         embs = self.emb_drop(self.emb(seq))
         embs = pack_padded_sequence(embs, lengths)
         gru_out, self.h = self.gru(embs, self.h)
-        gru_out, lengths = pad_packed_sequence(gru_out)     
+        gru_out, lengths = pad_packed_sequence(gru_out)
 
         avg_pool = F.adaptive_avg_pool1d(
             gru_out.permute(1, 2, 0), 1).view(seq.size(1), -1)
         max_pool = F.adaptive_max_pool1d(
             gru_out.permute(1, 2, 0), 1).view(seq.size(1), -1)
 
-        outp = self.out(torch.cat([self.h[-1], avg_pool, max_pool], dim=1))  
+        outp = self.out(torch.cat([self.h[-1], avg_pool, max_pool], dim=1))
         return F.log_softmax(outp, dim=-1)  # it will return log of softmax
 
     def init_hidden(self, batch_size):
