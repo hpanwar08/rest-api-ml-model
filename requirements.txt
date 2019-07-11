@@ -11,7 +11,7 @@ spacy>=2.0.11
 pandas==0.22.0
 numpy==1.16
 scikit-learn>=0.19.1
-# for windows with GPU
-# https://download.pytorch.org/whl/cu90/torch-1.1.0-cp36-cp36m-win_amd64.whl
+# for windows with CPU
+# https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
 # for linux cpu
 https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
