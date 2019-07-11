@@ -38,4 +38,5 @@ A microservice built on Flask to deploy ML models as rest api.
 - [ ] add tests
 - [ ] add load testing
 - [ ] add database to store predictions
+- [ ] dockerize the app
 - [ ] add authentication
