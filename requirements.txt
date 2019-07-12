@@ -5,6 +5,7 @@ Flask-Testing==0.7.1
 flask-restplus
 Flask-RESTful==0.3.7
 coverage==4.5.3
+codecov
 flake8
 python-dotenv
 spacy>=2.0.11
