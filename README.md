@@ -33,11 +33,11 @@ This code can be used as a boilerplate for your next machine learning project de
 
 ### Swagger API
 
-![Swagger API](imgs/swagger1.jpg "Swagger API")  
+![Swagger API](/imgs/swagger1.jpg "Swagger API")  
 
 ### Sentiment Prediction using ```/sentiment``` endpoint    
 
-![Sentiment](imgs/senti1.jpg "Sentiment predict")
+![Sentiment](/imgs/senti1.jpg "Sentiment predict")
 
 
 ## Work in progress... 
