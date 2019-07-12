@@ -4,7 +4,8 @@
 
 # Rest API for deploying ML models :zap:
 
-A microservice built on Flask to deploy ML models as rest api.
+A microservice built on Flask to deploy ML models as rest api.  
+This code can be used as a boilerplate for your next machine learning project deployment
 
 ## Steps to run
 * Create virtual or conda environment and activate it  
@@ -30,13 +31,16 @@ A microservice built on Flask to deploy ML models as rest api.
 * Code coverage  
   `python manage.py cov`
 
-
+### Swagger API
+![Swagger API](imgs/swagger1.jpg "Swagger API")  
+### Sentiment Prediction using ```/sentiment``` endpoint    
+![Sentiment](imgs/senti1.jpg "Sentiment predict")
 
 ## Work in progress... 
 ### TODO
 - [x] add sentiment analysis model
-- [ ] update api
-- [ ] add tests
+- [x] update api
+- [x] add tests
 - [ ] add load testing
 - [ ] add database to store predictions
 - [ ] dockerize the app
