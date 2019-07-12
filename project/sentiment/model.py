@@ -56,6 +56,8 @@ class ConcatPoolingGRUAdaptive(nn.Module):
             requires_grad=True).to(device)
 
     def predict(self, text):
+        if not isinstance(text, str):
+            return None, None
         vec = self.preprocess(text)
         x, lens = ConcatPoolingGRUAdaptive.collate_fn([vec])
         with torch.no_grad():

@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/hpanwar08/rest-api-ml-model.svg?branch=master)](https://travis-ci.org/hpanwar08/rest-api-ml-model
 )
-[![codecov](https://codecov.io/gh/hpanwar08/rest-api-ml-model/branch/bulk_predict/graph/badge.svg)](https://codecov.io/gh/hpanwar08/rest-api-ml-model)
+[![codecov](https://codecov.io/gh/hpanwar08/rest-api-ml-model/branch/master/graph/badge.svg)](https://codecov.io/gh/hpanwar08/rest-api-ml-model)
 
 # Rest API for deploying ML models :zap:
 
