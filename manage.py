@@ -1,3 +1,4 @@
+import logging
 import sys
 import unittest
 from flask.cli import FlaskGroup
@@ -5,7 +6,12 @@ import click
 import coverage
 from gevent.pywsgi import WSGIServer
 from gevent import monkey
+
 from project import create_app
+from constants import Constants
+from configuration import initialize_logger
+from configuration import initialize_config
+
 
 monkey.patch_all()
 
@@ -22,15 +28,23 @@ cli = FlaskGroup(app)
 
 
 @cli.command()
-def start():
+@click.option('--env', default='prod', help='Setup environment for dev/test/prod')
+@click.argument('server_config', type=str, default='server_config.yaml')
+def start(env, server_config):
     """cli function to start server in gevent
     """
+    config = initialize_config(env, server_config)
+    app.config.from_object(config['flask_settings'])
+    initialize_logger()
+    logger = logging.getLogger(Constants.MICROSERVICE_NAME)
+    logger.info('Starting web server')
     try:
-        http_server = WSGIServer(('', 5000), app)
+        http_server = WSGIServer((config['host'], config['port']), app, log=app.logger)
         click.echo('Starting web server...')
         http_server.serve_forever()
     except KeyboardInterrupt:
         click.echo('Stopping web server...')
+        logger.info('Stopping web server')
         http_server.stop()
 
 

@@ -8,7 +8,8 @@ A microservice built on Flask to deploy ML models as rest api.
 This code can be used as a boilerplate for your next machine learning project deployment
 
 ## Steps to run
-* Create virtual or conda environment and activate it  
+
+* Create virtual or conda environment and activate it
   Windows  
   `virtualenv restenv`  
   `restenv\Scripts\activate`  
@@ -19,17 +20,16 @@ This code can be used as a boilerplate for your next machine learning project de
   Edit line 15-17 in requirements.txt according to your OS  
   `pip install -r requirements.txt`  
 * Install spacy model  
-  `python -m spacy download en_core_web_sm`
-* To start the microservice  
-  flask default server  
-  `python manage.py run`  
-  or Gevent production server  
-  `python manage.py start`  
+  ```python -m spacy download en_core_web_sm```
+* To start the microservice in dev environment  
+  ```python manage.py start --env=dev```  
+* To start the microservice in production environment  
+  ```python manage.py start```
 * To access swagger api, open http://localhost:5000/api/v1/
 * To run tests  
-  `python manage.py test`
+  ```python manage.py test```
 * Code coverage  
-  `python manage.py cov`
+  ```python manage.py cov```
 
 ### Swagger API
 
