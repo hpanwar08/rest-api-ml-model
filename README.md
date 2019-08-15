@@ -104,6 +104,8 @@ URL: http://localhost:5000/api/v1/sentiments
 
 ### Swagger API
 
+URL: http://localhost:5000/api/v1/  
+
 ![Swagger API](/imgs/swagger1.JPG "Swagger API")
 
 ### Sentiment Prediction using ```/sentiment``` endpoint
