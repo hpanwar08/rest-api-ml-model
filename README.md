@@ -31,6 +31,77 @@ This code can be used as a boilerplate for your next machine learning project de
 * Code coverage  
   ```python manage.py cov```
 
+### Sample input json body
+
+URL: http://localhost:5000/api/v1/sentiment  
+
+```json
+{
+	"text": "i am so happy"
+}
+```
+
+### Sample output json body
+
+```json
+{
+    "status": "success",
+    "message": {
+        "text": "i am so happy",
+        "sentiment": "positive",
+        "confidence": 0.9986
+    }
+}
+```
+
+### Input json body
+
+URL: http://localhost:5000/api/v1/sentiments  
+
+```json
+{
+    "texts": [
+        {
+            "text": "i am so happy"
+        },
+        {
+            "text": "I am so SAD"
+        },
+        {
+            "text": "today is a Good day"
+        }
+    ]
+}
+```
+
+### Output json body
+
+```json
+{
+    "status": "success",
+    "message": [
+        {
+            "status": "success",
+            "text": "i am so happy",
+            "sentiment": "positive",
+            "confidence": 0.9986
+        },
+        {
+            "status": "success",
+            "text": "I am so SAD",
+            "sentiment": "negative",
+            "confidence": 0.9993
+        },
+        {
+            "status": "success",
+            "text": "today is a Good day",
+            "sentiment": "positive",
+            "confidence": 0.9989
+        }
+    ]
+}
+```
+
 ### Swagger API
 
 ![Swagger API](/imgs/swagger1.JPG "Swagger API")
