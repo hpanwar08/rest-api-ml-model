@@ -5,3 +5,4 @@ htmlcov/
 coverage.xml
 .coverage
 logs
+.idea
