@@ -1,16 +1,23 @@
 import re
+import logging
 import pickle
+import yaml
+import pathlib
 import spacy
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
+from constants import Constants
+
 import warnings
 warnings.filterwarnings("ignore")
 
 # device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 device = torch.device('cpu')
+
+logger = logging.getLogger(Constants.MICROSERVICE_NAME)
 
 PAD = 0
 UNK = 1
@@ -63,6 +70,7 @@ class ConcatPoolingGRUAdaptive(nn.Module):
         with torch.no_grad():
             y_pred = self.forward(x, lens)
         probs = torch.exp(y_pred)
+        logger.debug(f'text: {text}, probabilities: {probs.tolist()}')
         return torch.max(y_pred, dim=1)[1].item(), probs.tolist()[0]
 
     def preprocess(self, text):
@@ -80,6 +88,7 @@ class ConcatPoolingGRUAdaptive(nn.Module):
         text = re.sub(r'https?:/\/\S+', ' ', text)
         # remove non alphanumeric character
         text = re.sub(r'[^A-Za-z0-9]+', ' ', text)
+        logger.debug(f'cleaned text: {text}')
         return text.strip()
 
     def vectorize(self, tokens, word2idx):
@@ -106,12 +115,22 @@ class ConcatPoolingGRUAdaptive(nn.Module):
         return padded_sents, lens
 
     def load(path=None):
-        model = ConcatPoolingGRUAdaptive(100002, 100, 256, 2)
+        try:
+            with open(pathlib.Path(__file__).parent.joinpath('model_config.yaml')) as f:
+                ml_config = yaml.full_load(f)
+        except FileNotFoundError as fnf:
+            logger.error(fnf)
+            raise fnf
+        params = ml_config['sentiment_analysis']['params']
+        model = ConcatPoolingGRUAdaptive(
+            params['vocab_size'],
+            params['embedding_dim'],
+            params['n_hidden'],
+            params['n_out'])
         print('Loading model...')
         model.load_state_dict(
             torch.load(
-                'project/sentiment/ml_models/'
-                'text_gru_concat_sentiment_10.pth', map_location='cpu'))
+                ml_config['sentiment_analysis']['model_path'], map_location='cpu'))
         model.eval()
         return model
 

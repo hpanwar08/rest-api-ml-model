@@ -4,3 +4,4 @@ restenv/
 htmlcov/
 coverage.xml
 .coverage
+logs

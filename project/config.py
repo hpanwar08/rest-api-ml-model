@@ -4,7 +4,8 @@ class BaseConfig:
 
 
 class DevelopmentConfig(BaseConfig):
-    pass
+    ENV = 'development'
+    DEBUG = True
 
 
 class TestingConfig(BaseConfig):

@@ -1,0 +1,7 @@
+sentiment_analysis:
+  params:
+    vocab_size: 100002
+    embedding_dim: 100
+    n_hidden: 256
+    n_out: 2
+  model_path: 'project/sentiment/ml_models/text_gru_concat_sentiment_10.pth'

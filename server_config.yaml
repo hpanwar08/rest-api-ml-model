@@ -1,0 +1,18 @@
+prod: &prod
+  host: 0.0.0.0
+  port: 5000
+  flask_settings: project.config.BaseConfig
+  log_debug: false
+
+testing:
+  host: localhost
+  port: 5000
+  flask_settings: project.config.TestingConfig
+  log_debug: true
+
+dev:
+  host: localhost
+  port: 5000
+  flask_settings: project.config.DevelopmentConfig
+  log_debug: true
+  
