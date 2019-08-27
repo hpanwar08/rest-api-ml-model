@@ -114,11 +114,14 @@ URL: http://localhost:5000/api/v1/
 
 
 ## Work in progress... 
-### TODO
-- [x] add sentiment analysis model
-- [x] update api
-- [x] add tests
-- [ ] add load testing
-- [ ] add database to store predictions
-- [ ] dockerize the app
-- [ ] add authentication
+<details><summary><i>TODOs</i></summary><p>
+
+- [x] add sentiment analysis model  
+- [x] update api  
+- [x] add tests  
+- [ ] add load testing  
+- [ ] add database to store predictions  
+- [ ] dockerize the app  
+- [ ] add authentication  
+
+</p></details>
