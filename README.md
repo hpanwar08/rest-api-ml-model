@@ -114,7 +114,7 @@ URL: http://localhost:5000/api/v1/
 
 
 ## Work in progress... 
-<details><summary><i>TODOs</i></summary><p>
+<details><summary>TODOs ⏰</summary><p>
 
 - [x] add sentiment analysis model  
 - [x] update api  
