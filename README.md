@@ -122,6 +122,7 @@ URL: http://localhost:5000/api/v1/
 - [x] add sentiment analysis model  
 - [x] update api  
 - [x] add tests  
+- [x] add logging
 - [ ] add load testing  
 - [ ] add database to store predictions  
 - [ ] dockerize the app  
