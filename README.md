@@ -115,7 +115,6 @@ URL: http://localhost:5000/api/v1/
 
 ![Sentiment](/imgs/senti1.JPG "Sentiment predict")
 
----
 
 ## Work in progress... 
 <details><summary>TODOs ⏰</summary><p>
