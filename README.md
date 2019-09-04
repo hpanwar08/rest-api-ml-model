@@ -54,7 +54,7 @@ URL: http://localhost:5000/api/v1/sentiment
 }
 ```
 
-### Input json body
+### Input json body (bulk predict)
 
 URL: http://localhost:5000/api/v1/sentiments  
 
