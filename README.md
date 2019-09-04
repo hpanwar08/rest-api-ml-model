@@ -8,6 +8,7 @@ A microservice built on Flask to deploy ML models as rest api.
 This code can be used as a boilerplate for your next machine learning project deployment
 
 ## Steps to run
+---
 
 * Create virtual or conda environment and activate it
   Windows  
@@ -30,6 +31,10 @@ This code can be used as a boilerplate for your next machine learning project de
   ```python manage.py test```
 * Code coverage  
   ```python manage.py cov```
+---
+
+## Input JSON and output JSON
+---
 
 ### Sample input json body
 
@@ -102,7 +107,10 @@ URL: http://localhost:5000/api/v1/sentiments
 }
 ```
 
-### Swagger API
+---
+
+## Swagger API
+---
 
 URL: http://localhost:5000/api/v1/  
 
@@ -112,6 +120,7 @@ URL: http://localhost:5000/api/v1/
 
 ![Sentiment](/imgs/senti1.JPG "Sentiment predict")
 
+---
 
 ## Work in progress... 
 <details><summary>TODOs ⏰</summary><p>
@@ -125,3 +134,5 @@ URL: http://localhost:5000/api/v1/
 - [ ] add authentication  
 
 </p></details>
+
+---
