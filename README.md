@@ -5,7 +5,7 @@
 # Rest API for deploying ML models :zap:
 
 A microservice built on Flask to deploy ML models as rest api.  
-This code can be used as a boilerplate for your next machine learning project deployment
+This code can be used as a boilerplate for your next machine learning project deployment. Replace project/sentiment/ml_models/model.py with your custom model architecture file.
 
 ## Steps to run
 
