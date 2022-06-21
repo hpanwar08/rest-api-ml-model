@@ -11,7 +11,7 @@ python-dotenv
 pyyaml
 spacy>=2.0.11
 pandas==0.22.0
-numpy==1.16
+numpy==1.22.0
 scikit-learn>=0.19.1
 # for windows with CPU
 # https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
