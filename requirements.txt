@@ -1,5 +1,5 @@
 werkzeug==0.15.5
-Flask==1.0.2
+Flask==2.3.2
 gevent
 Flask-Testing==0.7.1
 flask-restplus
